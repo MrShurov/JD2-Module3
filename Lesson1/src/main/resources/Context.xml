@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop = "http://www.springframework.org/schema/aop"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/aop
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+
+<bean id="person" class="spring.Person">
+        <property name="name" value="Egor"/>
+    </bean>
+    <bean id="notifier" class="spring.Notifier"/>
+    <aop:config>
+        <aop:aspect id="note" ref="notifier">
+            <aop:pointcut id="notify" expression="execution(* *.getName(..))"/>
+            <aop:before pointcut-ref="notify" method="AspectTest"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
