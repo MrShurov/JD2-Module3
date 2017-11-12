@@ -1,0 +1,56 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+   http://www.springframework.org/schema/util
+   http://www.springframework.org/schema/util/spring-util-3.1.xsd"
+       default-init-method="init" default-destroy-method="destroy">
+    <bean id="info" class="Lesson2.entity.Info">
+        <property name="balance" value="100"/>
+    </bean>
+    <bean id="personDefault" class="Lesson2.entity.PersonDefault">
+        <property name="name" value="Egor"/>
+        <property name="test">
+            <list>
+                <value>QWERTY</value>
+                <value>UIOP</value>
+                <value>QWERTY</value>
+            </list>
+        </property>
+        <property name="testMap">
+            <map>
+                <entry key="1" value="Qwerty"/>
+                <entry key="2" value="POiuy"/>
+            </map>
+        </property>
+        <property name="testProps">
+            <props>
+                <prop key="q">Qwerty</prop>
+                <prop key="w">rerty</prop>
+            </props>
+        </property>
+        <property name="info" value="#{info}"/>
+        <property name="balance" value="#{info.getBalance()}"/>
+    </bean>
+    <bean id="operation" class="Lesson2.entity.Operation">
+        <property name="plus" value="#{2+2}"/>
+        <property name="minus" value="#{6-2}"/>
+        <property name="divide" value="#{4/2}"/>
+        <property name="multiplication" value="#{2*2}"/>
+        <property name="eq" value="#{operation.divide eq 2}"/>
+        <property name="lt" value="#{operation.divide lt 2}"/>
+        <property name="le" value="#{operation.divide le 2}"/>
+        <property name="gt" value="#{operation.divide gt 2}"/>
+        <property name="and" value="#{operation.divide gt 0 and operation.plus eq 4}"/>
+        <property name="or" value="#{operation.divide gt 5 or operation.plus eq 4}"/>
+    </bean>
+    <util:list id="list">
+        <bean class="Lesson2.entity.Person" p:name="Egor"/>
+        <bean class="Lesson2.entity.Person" p:name="Nikita"/>
+        <bean class="Lesson2.entity.Person" p:name="Andrew"/>
+    </util:list>
+    <bean id="person" class="Lesson2.entity.Person" p:name="#{list[1].name}"/>
+</beans>
