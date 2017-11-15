@@ -107,7 +107,7 @@ public class autowiredTest {
     }
 
     @Test
-    void annotationResourseTest(){
+    void annotationResourceTest(){
         ApplicationContext context = new ClassPathXmlApplicationContext("ContextCustom.xml");
         UserResource userResource = (UserResource) context.getBean("userResource");
         System.out.println(userResource);
