@@ -6,11 +6,8 @@
         <fileset id="fileset" name="Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/Context.xml</file>
         </fileset>
-        <fileset id="fileset2" name="ContextDefault" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/ContextDefault.xml</file>
-        </fileset>
-        <fileset id="fileset3" name="ContextNamespace" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/ContextNamespace.xml</file>
+        <fileset id="fileset2" name="ContextWithFilters" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/ContextWithFilters.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -26,6 +23,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.0.1.RELEASE" level="project" />

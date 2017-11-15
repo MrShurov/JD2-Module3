@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>JD2-Module3</groupId>
+    <artifactId>JD2-Module3</artifactId>
+    <version>1.0</version>
+  </parent>
+  <groupId>Lesson4</groupId>
+  <artifactId>Lesson4</artifactId>
+  <version>1.0</version>
+  <name>Lesson4</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.0.1</version>
+    </dependency>
+  </dependencies>
+</project>

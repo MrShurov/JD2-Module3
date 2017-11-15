@@ -11,7 +11,7 @@
   <properties>
     <lombok.version>1.16.6</lombok.version>
     <compiler.version>3.7.0</compiler.version>
-    <spring.version>4.3.11.RELEASE</spring.version>
+    <spring.version>5.0.1.RELEASE</spring.version>
     <aspect.version>1.8.4</aspect.version>
   </properties>
 
@@ -61,7 +61,6 @@
             <version>5.0.0-RC3</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
@@ -74,5 +73,6 @@
     <module>Lesson1</module>
     <module>Lesson2</module>
     <module>Lesson3</module>
+    <module>Lesson4</module>
   </modules>
 </project>
