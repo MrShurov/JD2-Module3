@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component("userInclude")
-public class UserInclude {
+public class UserInclude implements IUser{
     @Value("Gena")
     private String name;
     @Autowired

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 @AllArgsConstructor
 @Component("userExclude")
-public class UserExclude {
+public class UserExclude implements IUser {
     @Value("Egor")
     private String name;
     @Autowired

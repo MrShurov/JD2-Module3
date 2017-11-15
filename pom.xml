@@ -66,7 +66,11 @@
             <artifactId>javax.inject</artifactId>
             <version>1</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
     </dependencies>
 
   <modules>
